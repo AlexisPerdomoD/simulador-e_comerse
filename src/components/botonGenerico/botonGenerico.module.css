@@ -1,0 +1,6 @@
+.boton{
+  background-color: var(--colorSecundario);
+  color : var(--colorSubtitulosLight);
+  border:none;
+  font-size: 1.1rem;
+}

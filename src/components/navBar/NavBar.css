@@ -1,0 +1,10 @@
+.navbarContainer{
+  display: flex;
+  column-gap: 1rem;
+}
+.navbar li{
+  margin: 0 .125rem;
+}
+.navbar li button{
+  border: solid black 2px;
+}

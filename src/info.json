@@ -1,0 +1,89 @@
+{
+  "Frutas frescas":[
+      {"codigo": 101, "nombre": "Mango", "descripcion": "Mango fresco cultivado localmente en Ica.", "precio": 9.5, "cantidad": 1},
+      {"codigo": 102, "nombre": "Uvas", "descripcion": "Uvas dulces de viñedos locales.", "precio": 15.0, "cantidad": 1},
+      {"codigo": 103, "nombre": "Chirimoya", "descripcion": "Chirimoya jugosa y dulce de la región de Ica.", "precio": 20.0, "cantidad": 1},
+      {"codigo": 104, "nombre": "Papaya", "descripcion": "Papaya fresca y deliciosa.", "precio": 28, "cantidad": 1},
+      {"codigo": 105, "nombre": "Plátano", "descripcion": "Plátano maduro y energético.", "precio": 19, "cantidad": 1},
+      {"codigo": 106, "nombre": "Fresas", "descripcion": "Fresas frescas y jugosas.", "precio": 35, "cantidad": 1},
+      {"codigo": 107, "nombre": "Kiwi", "descripcion": "Kiwi rico en vitamina C.", "precio": 27, "cantidad": 1},
+      {"codigo": 108, "nombre": "Limón", "descripcion": "Limones ácidos y refrescantes.", "precio": 7, "cantidad": 1}
+    ],
+  "Verduras Orgánicas":[
+    {"codigo": 201, "nombre": "Espinacas", "descripcion": "Espinacas orgánicas cultivadas en suelo fértil.", "precio": 18, "cantidad": 1},
+    {"codigo": 202, "nombre": "Zanahorias", "descripcion": "Zanahorias frescas y crujientes.", "precio": 4, "cantidad": 1},
+    {"codigo": 203, "nombre": "Brócoli", "descripcion": "Brócoli lleno de nutrientes.", "precio": 4.5, "cantidad": 1},
+    {"codigo": 204, "nombre": "Pimientos", "descripcion": "Pimientos coloridos y sabrosos.", "precio": 3.5, "cantidad": 1},
+    {"codigo": 205, "nombre": "Calabacín", "descripcion": "Calabacín fresco y versátil.", "precio": 2.5, "cantidad": 1},
+    {"codigo": 206, "nombre": "Pepino", "descripcion": "Pepinos crujientes y refrescantes.", "precio": 2.5, "cantidad": 1},
+    {"codigo": 207, "nombre": "Repollo", "descripcion": "Repollo fresco y crujiente.", "precio": 3.7, "cantidad": 1},
+    {"codigo": 208, "nombre": "Acelga", "descripcion": "Acelga nutritiva y deliciosa.", "precio": 3.0, "cantidad": 1}
+  ]
+  ,
+  "Productos Lácteos Locales":[
+    {"codigo": 301, "nombre": "Queso Fresco", "descripcion": "Queso fresco de leche de vaca local.", "precio": 10.5, "cantidad": 1},
+    {"codigo": 302, "nombre": "Yogur Natural", "descripcion": "Yogur natural sin aditivos.", "precio": 6.0, "cantidad": 1},
+    {"codigo": 303, "nombre": "Leche Fresca", "descripcion": "Leche fresca y nutritiva.", "precio": 6.8, "cantidad": 1},
+    {"codigo": 304, "nombre": "Mantequilla", "descripcion": "Mantequilla cremosa y deliciosa.", "precio": 5.0, "cantidad": 1},
+    {"codigo": 305, "nombre": "Crema", "descripcion": "Crema espesa para cocinar.", "precio": 5.7, "cantidad": 1},
+    {"codigo": 306, "nombre": "Yogur de Frutas", "descripcion": "Yogur con trozos de frutas frescas.", "precio": 7.5, "cantidad": 1},
+    {"codigo": 307, "nombre": "Queso Madurado", "descripcion": "Queso madurado con sabor fuerte.", "precio": 15.2, "cantidad": 1},
+    {"codigo": 308, "nombre": "Yogur Griego", "descripcion": "Yogur espeso y cremoso.", "precio": 6.8, "cantidad": 1}
+  ]
+  ,
+  "Hierbas Aromáticas":[
+    {"codigo": 401, "nombre": "Cilantro", "descripcion": "Cilantro fresco y aromático.", "precio": 0.8, "cantidad": 1},
+    {"codigo": 402, "nombre": "Albahaca", "descripcion": "Albahaca fresca para realzar tus platos.", "precio": 1.0, "cantidad": 1},
+    {"codigo": 403, "nombre": "Perejil", "descripcion": "Perejil picante y fresco.", "precio": 1.1, "cantidad": 1},
+    {"codigo": 404, "nombre": "Romero", "descripcion": "Romero fragante para tus recetas.", "precio": 1.3, "cantidad": 1},
+    {"codigo": 405, "nombre": "Tomillo", "descripcion": "Tomillo aromático y versátil.", "precio": 1.2, "cantidad": 1},
+    {"codigo": 406, "nombre": "Menta", "descripcion": "Menta refrescante para infusiones.", "precio": 1.4, "cantidad": 1},
+    {"codigo": 407, "nombre": "Estragón", "descripcion": "Estragón para platos gourmet.", "precio": 1.5, "cantidad": 1},
+    {"codigo": 408, "nombre": "Cebollín", "descripcion": "Cebollín fresco para decorar tus platos.", "precio": 1.0, "cantidad": 1}
+  ]
+  ,
+  "Miel y Productos Apícolas":[
+    {"codigo": 601, "nombre": "Miel de Abeja", "descripcion": "Miel pura y natural de abejas locales.", "precio": 26.0, "cantidad": 1},
+    {"codigo": 602, "nombre": "Polen de Flores", "descripcion": "Polen recolectado de flores de la región.", "precio": 14.5, "cantidad": 1},
+    {"codigo": 603, "nombre": "Jalea Real", "descripcion": "Jalea real nutritiva y energética.", "precio": 17.5, "cantidad": 1},
+    {"codigo": 604, "nombre": "Cera de Abejas", "descripcion": "Cera de abejas para usos diversos.", "precio": 13.2, "cantidad": 1},
+    {"codigo": 605, "nombre": "Propóleo", "descripcion": "Propóleo para fortalecer el sistema inmunológico.", "precio": 15.8, "cantidad": 1},
+    {"codigo": 606, "nombre": "Bálsamo de Abejas", "descripcion": "Bálsamo para la piel con cera de abejas.", "precio": 14.0, "cantidad": 1},
+    {"codigo": 607, "nombre": "Polen en Gránulos", "descripcion": "Polen en gránulos para agregar a tus comidas.", "precio": 13.7, "cantidad": 1},
+    {"codigo": 608, "nombre": "Miel de Agave", "descripcion": "Miel de agave orgánica.", "precio": 16.5, "cantidad": 1}
+  ]
+  ,
+  "Productos Panificados":[
+    {"codigo": 501, "nombre": "Pan Integral", "descripcion": "Pan integral recién horneado.", "precio": 9.0, "cantidad": 1},
+    {"codigo": 502, "nombre": "Pastel de Zanahoria", "descripcion": "Delicioso pastel de zanahoria casero.", "precio": 13.5, "cantidad": 1},
+    {"codigo": 503, "nombre": "Baguette", "descripcion": "Baguette crujiente y dorada.", "precio": 10.8, "cantidad": 1},
+    {"codigo": 504, "nombre": "Croissants", "descripcion": "Croissants hojaldrados y deliciosos.", "precio": 6.2, "cantidad": 1},
+    {"codigo": 505, "nombre": "Pretzels", "descripcion": "Pretzels salados para tus meriendas.", "precio": 2.5, "cantidad": 1},
+    {"codigo": 506, "nombre": "Muffins de Arándanos", "descripcion": "Muffins esponjosos con arándanos.", "precio": 9.3, "cantidad": 1},
+    {"codigo": 507, "nombre": "Pan de Ajo", "descripcion": "Pan de ajo para acompañar tus comidas.", "precio": 10.7, "cantidad": 1},
+    {"codigo": 508, "nombre": "Cookies de Chocolate", "descripcion": "Cookies crujientes con trozos de chocolate.", "precio": 7.2, "cantidad": 1}
+  ]
+  ,
+  "Productos Secos y Frutos Secos":[
+    {"codigo": 701, "nombre": "Quinoa", "descripcion": "Quinoa orgánica y nutritiva.", "precio": 13.2, "cantidad": 1},
+    {"codigo": 702, "nombre": "Lentejas", "descripcion": "Lentejas secas ideales para guisos.", "precio": 11.5, "cantidad": 1},
+    {"codigo": 703, "nombre": "Arroz Integral", "descripcion": "Arroz integral de grano largo.", "precio": 12.0, "cantidad": 1},
+    {"codigo": 704, "nombre": "Garbanzos", "descripcion": "Garbanzos secos para sopas y ensaladas.", "precio": 11.7, "cantidad": 1},
+    {"codigo": 705, "nombre": "Avena", "descripcion": "Avena en hojuelas para el desayuno.", "precio": 11.8, "cantidad": 1},
+    {"codigo": 706, "nombre": "Cuscús", "descripcion": "Cuscús para platos exquisitos.", "precio": 12.3, "cantidad": 1},
+    {"codigo": 707, "nombre": "Chía", "descripcion": "Semillas de chía ricas en omega-3.", "precio": 14.0, "cantidad": 1},
+    {"codigo": 708, "nombre": "Trigo Sarraceno", "descripcion": "Trigo sarraceno para dietas sin gluten.", "precio": 13.5, "cantidad": 1}
+  ]
+  ,
+  "Bebidas-Locales":[
+    {"codigo": 801, "nombre": "Jugo de Maracuyá", "descripcion": "Refrescante jugo de maracuyá natural.", "precio": 12.3, "cantidad": 1},
+    {"codigo": 802, "nombre": "Vino Tinto de Ica", "descripcion": "Vino tinto elaborado con uvas locales.", "precio": 110.0, "cantidad": 1},
+    {"codigo": 803, "nombre": "Pisco", "descripcion": "Pisco peruano para cócteles auténticos.", "precio": 112.5, "cantidad": 1},
+    {"codigo": 804, "nombre": "Chicha Morada", "descripcion": "Chicha morada tradicional peruana.", "precio": 12.8, "cantidad": 1},
+    {"codigo": 805, "nombre": "Inka Cola", "descripcion": "Bebida gaseosa amarilla de sabor único.", "precio": 11.5, "cantidad": 1},
+    {"codigo": 806, "nombre": "Chicha de Jora", "descripcion": "Chicha de jora fermentada de maíz.", "precio": 113.2, "cantidad": 1},
+    {"codigo": 807, "nombre": "Emoliente", "descripcion": "Emoliente saludable y reconfortante.", "precio": 12.0, "cantidad": 1},
+    {"codigo": 808, "nombre": "Té de Coca", "descripcion": "Té de coca para revitalizar el cuerpo.", "precio": 13.7, "cantidad": 1}
+  ]
+}
+
