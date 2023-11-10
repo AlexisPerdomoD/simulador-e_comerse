@@ -1,4 +1,25 @@
 #root {
   margin: 0 auto;
   text-align: center;
+
+
+  
+  
+
+
+  /* paleta de colores*/
+  --colorPrincipal: rgba(67, 67, 187, 0.715);
+  --colorSecundario: rgba(5, 75, 5, 0.809);
+  --colorSecundario2: rgba(181, 239, 168, 0.895);
+  --colorSecundario3: rgba(48, 94, 38, 0.895);
+  --colorSubtitulos:rgba(39, 4, 4, 0.903);
+  --colorSubtitulosLight: rgba(204, 240, 202, 0.811);
+}
+
+*::-webkit-scrollbar {
+  width: 0.5vw;
+}
+*::-webkit-scrollbar-thumb {
+  background-color:var(--colorSecundario3);
+  border-radius: 2rem;
 }

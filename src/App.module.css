@@ -1,21 +1,2 @@
 
-.paletaColores{
-  --colorPrincipal: rgba(67, 67, 187, 0.715);
-  --colorSecundario: rgba(5, 75, 5, 0.809);
-  --colorSubtitulos:rgba(39, 4, 4, 0.903);
-  --colorSubtitulosLight: rgba(204, 240, 202, 0.811);
-}
-.headerPrincipal{
-  display: flex;
-  padding: 0 2vmin;
-  column-gap: 1vmin;
-  justify-content: space-between;
-  background-color: var(--colorPrincipal);
-}
-.headerPrincipal .tituloPrincipal{
-  color:var(--colorSubtitulos);
-  display: flex;
-}
-.logoPrincipal{
-  max-width: 80px;
-}
+

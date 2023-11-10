@@ -1,4 +1,5 @@
 import { Cartas } from "../cartas/Cartas"
+import "./itemListContainer.css"
 
  const ItemListContaiener = ({ greeting , productosAMostrar }) => {
   const renderProductosAMostrar = (array) => { 
@@ -11,7 +12,7 @@ import { Cartas } from "../cartas/Cartas"
   return<>
   <div className="itemListContainer" key={"itemListContainer"}>
     <h2 key="greeting">{greeting}</h2>
-      <div className="productosMostradosContainer d-flex  p-2 flex-wrap" key="contenedorProductos">
+      <div className="productosMostradosContainer" key="contenedorProductos">
         {renderProductosAMostrar(productosAMostrar)}
       </div>
   </div>

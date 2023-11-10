@@ -1,0 +1,9 @@
+.productosMostradosContainer{
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  gap:1vmin 2vmin;
+}
+.itemListContainer{
+  padding: 0 auto;
+}

@@ -1,10 +1,11 @@
 export { default as App } from './App';
-export * from './components/EsperarApi';
+export * from './assets/EsperarApi';
+export * from './assets/generadorDeProductosTest';
 export { default as BotonGenerico } from './components/botonGenerico/BotonGenerico';
 export * from './components/cartWidget/CartWidget';
 export * from './components/cartas/Cartas';
-export * from './assets/generadorDeProductosTest';
+export * from './components/categorias/Categorias';
+export * from './components/header/Header';
 export { default as ItemListContainer } from './components/itemListContainer/ItemListContainer';
 export { default as NavBar } from './components/navBar/NavBar';
-export * from './index';
 export * from './main';

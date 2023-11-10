@@ -1,5 +1,6 @@
 .navbarContainer{
   display: flex;
+  flex-wrap: nowrap;
   column-gap: 1rem;
 }
 .navbar li{
@@ -7,4 +8,6 @@
 }
 .navbar li button{
   border: solid black 2px;
+  border-radius: .25rem;
+  font-size: 1.3rem;
 }

@@ -1,0 +1,15 @@
+.headerPrincipal{
+  display: flex;
+  padding: 0 2vmin;
+  column-gap: 1vmin;
+  justify-content: space-between;
+  background-color: var(--colorPrincipal);
+  flex-wrap: wrap;
+}
+.headerPrincipal .tituloPrincipal{
+  color:var(--colorSubtitulos);
+  display: flex;
+}
+.logoPrincipal{
+  max-width: 80px;
+}
