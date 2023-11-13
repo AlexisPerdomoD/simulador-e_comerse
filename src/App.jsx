@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
 import { Header } from './components/header/Header';
 import { CuerpoPrincipal } from './components/cuerpoPrincipal/CuerpoPrincipal';
+import {ClickNavBarProvider} from "./components/contextNavBar/ContextNavBar";
 
 
 function App() {
     return (
     <>
-    <Header />
-    <CuerpoPrincipal />
+    <ClickNavBarProvider>
+      <Header/>
+      <CuerpoPrincipal/>
+    </ClickNavBarProvider>
     </>
   )
 }

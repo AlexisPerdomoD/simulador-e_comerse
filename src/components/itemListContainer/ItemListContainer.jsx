@@ -3,14 +3,11 @@ import "./itemListContainer.css"
 
  const ItemListContaiener = ({ greeting , productosAMostrar }) => {
   const renderProductosAMostrar = (array) => { 
-    let respuesta =[]
-    for (const e of array) {
-      respuesta.push(<Cartas producto={e}/>)
-    }
+    let respuesta = array.map(e => <Cartas producto={e} key={e.id}/>)
   return respuesta
   }
   return<>
-  <div className="itemListContainer" key={"itemListContainer"}>
+  <div className="itemListContainer" >
     <h2 key="greeting">{greeting}</h2>
       <div className="productosMostradosContainer" key="contenedorProductos">
         {renderProductosAMostrar(productosAMostrar)}

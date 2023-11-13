@@ -7,7 +7,7 @@
   height: 24rem;
   border-radius: .25rem;
   background-color:var(--colorSecundario2) ;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.216); /* sombra suave para todos los divs */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.216); /* sombra suave para todos los divs */
   transition: box-shadow 0.3s ease; /* transición suave */
   
 }

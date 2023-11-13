@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 
-export function EsperarApi(url) {
+export function esperarApi(url) {
 const [data, setData] = useState([]);
 
 useEffect(()=>{
   const fetchData = async() => {
       try{
         const respuesta = await fetch(url);
-        const dataJson = await respuesta.json();
-        setData(dataJson);
+        const dataJson = await respuesta.json()
+        setData(dataJson)
       } catch (error){
-        console.error("error emcontrado al esperar datos desde"+url,error);
+        console.error("error emcontrado al esperar datos desde"+url,error)
       }
   }
   fetchData()

@@ -1,0 +1,43 @@
+.listaCategoriaContainer{
+  position:absolute;
+  right: 0;
+  z-index: 1;
+  margin: 1vmin;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.57); 
+  transition: box-shadow 0.3s ease; 
+  background-color: var(--colorSecundario);
+  
+  
+}
+.listaCategoriaContainer button{
+  font-size: 1.5rem;
+  background-color: var(--colorSecundario1);
+}
+.listaCategoriaContainer button:hover{
+  background-color: var(--colorSubtitulos);
+  scale:1.05;
+  transition: all .1s;
+}
+.cerrarCategorias{
+  padding: 1.5rem;
+}
+.cerrarCategorias button{
+  padding: 0.5rem 1rem;
+  width: 100%;
+  
+}
+.listaCategoria{
+  
+  max-width: 20vw;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.listaCategoria button {
+  padding: .5rem 1rem;
+  box-sizing: border-box;
+
+}

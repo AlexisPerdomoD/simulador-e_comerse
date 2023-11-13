@@ -5,6 +5,8 @@ export { default as BotonGenerico } from './components/botonGenerico/BotonGeneri
 export * from './components/cartWidget/CartWidget';
 export * from './components/cartas/Cartas';
 export * from './components/categorias/Categorias';
+export * from './components/contextNavBar/ContextNavBar';
+export * from './components/cuerpoPrincipal/CuerpoPrincipal';
 export * from './components/header/Header';
 export { default as ItemListContainer } from './components/itemListContainer/ItemListContainer';
 export { default as NavBar } from './components/navBar/NavBar';

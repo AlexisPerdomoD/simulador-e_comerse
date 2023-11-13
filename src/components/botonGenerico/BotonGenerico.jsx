@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react"
+
 import estilo from "./botonGenerico.module.css"
-const BotonGenerico = ( {valor,texto, claseAdicional = "", funcionOModuloAEjecutar = ()=>{} }) => {
- const [clickBoton , setClickBoton] = useState(false);
- useEffect(funcionOModuloAEjecutar, []);
+const BotonGenerico = ( {valor ,texto ,kei = null, claseAdicional = "", funcionOModuloAEjecutar = ()=>{} }) => {
 return <>
-  <button className={`${estilo.boton}  ${claseAdicional}`} value={valor} >
+  <button className={`${estilo.boton}  ${claseAdicional}`} value={valor} key={kei} onClick={funcionOModuloAEjecutar}>
     {texto} 
     </button>
 </>
