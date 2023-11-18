@@ -4,14 +4,14 @@ import productos from "/estudios/reactCoderHouse/proyecto/e-comerse-vite/src/inf
 import "./categorias.css"
 
 export  const Categorias = ({categoriaToggle}) => {
-  const listaCategoria = Object.keys(productos);
-  const contextNavBar = useNavBarContext();
+  const listaCategoria = Object.keys(productos) //cambiar a traer como parametro 
+  const contextNavBar = useNavBarContext()
   
 
   return <>
   <div className="listaCategoriaContainer">
     <div className="cerrarCategorias">
-      <BotonGenerico valor="cerrarCategorias" texto="cerrar" funcionOModuloAEjecutar={()=>contextNavBar.clickNavBarToggle()}/>
+      <BotonGenerico valor="cerrarCategorias" texto="cerrar" funcionOModuloAEjecutar={()=>contextNavBar.clickNavBarToggle(null)}/>
     </div>
     <div className="listaCategoria">
       { listaCategoria.map((e) => <BotonGenerico texto={e} valor={e} key={`categoria-${e}`} funcionOModuloAEjecutar={()=> {categoriaToggle(e)}} />  ) }

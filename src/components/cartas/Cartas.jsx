@@ -6,7 +6,6 @@ export const Cartas = ({producto})=> {
     <img src={producto.imagenes[0] || "img/logoTest.svg"} className="card-img-top" alt={producto.nombre}/>
     <div className={estilo.cardBody}>
       <h5 className="card-title">{producto.nombre}</h5>
-      <p className={estilo.cardText}>{producto.descripcion}</p>
       <p className="precio"><strong>S/</strong>{producto.precio}</p>
     </div>
     < div className={estilo.contenedorBotones}>

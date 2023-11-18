@@ -1,13 +1,16 @@
 export { default as App } from './App';
-export * from './assets/EsperarApi';
+export * from './assets/esperarApi';
 export * from './assets/generadorDeProductosTest';
 export { default as BotonGenerico } from './components/botonGenerico/BotonGenerico';
 export * from './components/cartWidget/CartWidget';
 export * from './components/cartas/Cartas';
 export * from './components/categorias/Categorias';
+export { default as Contactanos } from './components/contactanos/Contactanos';
 export * from './components/contextNavBar/ContextNavBar';
 export * from './components/cuerpoPrincipal/CuerpoPrincipal';
 export * from './components/header/Header';
+export * from './components/inicio/Inicio';
 export { default as ItemListContainer } from './components/itemListContainer/ItemListContainer';
 export { default as NavBar } from './components/navBar/NavBar';
+export { default as SobreNostotros } from './components/sobreNosotros/SobreNostotros';
 export * from './main';

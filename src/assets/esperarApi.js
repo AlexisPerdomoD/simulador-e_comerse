@@ -10,7 +10,7 @@ useEffect(()=>{
         const dataJson = await respuesta.json()
         setData(dataJson)
       } catch (error){
-        console.error("error emcontrado al esperar datos desde"+url,error)
+        console.error("error emcontrado al esperar datos desde "+ url,error)
       }
   }
   fetchData()
