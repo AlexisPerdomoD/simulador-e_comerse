@@ -1,8 +1,9 @@
 
 import {CartWidget} from "../cartWidget/CartWidget";
 import  BotonGenerico  from "../botonGenerico/BotonGenerico";
-import "./NavBar.css"
 import { useNavBarContext } from "../contextNavBar/ContextNavBar";
+import { Link } from "react-router-dom";
+import "./NavBar.css"
   const NavBar = () => { 
     const navContext = useNavBarContext();
   return <>
@@ -11,10 +12,12 @@ import { useNavBarContext } from "../contextNavBar/ContextNavBar";
       <div  id="navbarNav">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-          < BotonGenerico valor="inicio" texto="Inicio" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>
+          <Link to={"/"}>
+            < BotonGenerico valor="inicio" texto="Inicio" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>
+            </Link>
           </li>
           <li className="nav-item">
-          < BotonGenerico valor="Categorias" texto="Mostrar Categorias" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>
+          < BotonGenerico valor="categorias" texto="Mostrar Categorias" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>
           </li>
           <li className="nav-item">
           < BotonGenerico valor="sobreNosotros" texto="Sobre Nosotros" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>      
