@@ -17,13 +17,19 @@ import "./NavBar.css"
             </Link>
           </li>
           <li className="nav-item">
-          < BotonGenerico valor="categorias" texto="Mostrar Categorias" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>
+              < BotonGenerico valor="categorias" texto="Mostrar Categorias" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>
           </li>
+
           <li className="nav-item">
-          < BotonGenerico valor="sobreNosotros" texto="Sobre Nosotros" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>      
+            <Link to="/sobreNosotros">
+              < BotonGenerico valor="sobreNosotros" texto="Sobre Nosotros" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>      
+            </Link>
           </li>
+          
           <li className="nav-item">
-          < BotonGenerico valor="contactanos" texto="Contactanos" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>      
+            <Link to="/contactanos">
+              < BotonGenerico valor="contactanos" texto="Contactanos" funcionOModuloAEjecutar={()=>navContext.clickNavBarToggle(event.target.value)}/>      
+            </Link>
           </li>
         </ul>
       </div>

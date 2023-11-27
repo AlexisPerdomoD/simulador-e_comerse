@@ -15,8 +15,7 @@ const moverlista = (valor)=> {
     }else if(valor === 1 && cont === producto.imagenes.length-1){
       setCont(0)
     }else{
-      let res = cont + valor
-      setCont(res)
+      setCont(cont + valor)
     }
 }
 return <>
