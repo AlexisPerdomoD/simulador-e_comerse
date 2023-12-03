@@ -19,7 +19,7 @@ const moverlista = (valor)=> {
     }
 }
 return <>
-<div className="itemListContainer">
+<div className="itemListContainerDetail">
   <div className="itemImagen">
     <img src={producto.imagenes[cont]} alt={`imagen descriptiva de ${producto.nombre}`} />
     <div className="botonesContainer">

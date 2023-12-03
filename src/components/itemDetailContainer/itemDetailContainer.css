@@ -1,4 +1,4 @@
-.itemListContainer{
+.itemListContainerDetail{
   display: flex;
   background-color: var(--colorSecundario);
   justify-content: space-evenly;
@@ -36,7 +36,7 @@
 }
 .botonesContainer button{
   width: 100%;
-  padding: 1vmin;
+  padding: 8px;
   background-color: var(--colorSubtitulos);
   font-weight: bolder;
 }

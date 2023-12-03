@@ -1,9 +1,8 @@
 .headerPrincipal{
   display: flex;
-  padding: 0 2vmin;
+  padding: 0 32px;
   column-gap: 1vmin;
   justify-content: space-between;
-  background-color: var(--colorPrincipal);
   flex-wrap: wrap;
 }
 .headerPrincipal .tituloPrincipal{
@@ -11,5 +10,5 @@
   display: flex;
 }
 .logoPrincipal{
-  max-width: 80px;
+  max-width: 48px;
 }

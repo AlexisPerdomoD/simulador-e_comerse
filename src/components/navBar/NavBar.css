@@ -1,13 +1,13 @@
 .navbarContainer{
   display: flex;
   flex-wrap: nowrap;
-  column-gap: 1rem;
+  column-gap: 16px;
 }
 .navbar li{
-  margin: 0 .125rem;
+  margin: 0 4px;
 }
 .navbar li button{
-  border: solid black 2px;
   border-radius: .25rem;
-  font-size: 1.3rem;
+  padding: 2px;
+  font-size: 1rem;
 }

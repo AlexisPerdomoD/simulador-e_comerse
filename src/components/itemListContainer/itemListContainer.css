@@ -5,7 +5,14 @@
   place-content: center;
 }
 .itemListContainer{
-  margin: 0 2rem;
+  width: 100%;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+}
+.itemListContainer h2{
+  padding: 16px;
+  margin: 48px 0;
 }
 .productosMostradosContainer{
   padding: 0 1.5vmin;

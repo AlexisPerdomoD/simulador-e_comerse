@@ -2,7 +2,7 @@
   position:absolute;
   right: 0;
   z-index: 1;
-  margin: 1vmin;
+  margin: 1vmin 0;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.57); 
@@ -21,23 +21,23 @@
   transition: all .1s;
 }
 .cerrarCategorias{
-  padding: 1.5rem;
+  padding: 24px;
 }
 .cerrarCategorias button{
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   width: 100%;
   
 }
 .listaCategoria{
   
-  max-width: 20vw;
+  max-width: 300px;
   width: max-content;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 .listaCategoria button {
-  padding: .5rem 1rem;
+  padding: 16px 8px;
   box-sizing: border-box;
 
 }

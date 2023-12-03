@@ -7,13 +7,13 @@ import "./itemListContainer.css"
 
 
   const renderProductosAMostrar = (array) => { 
-    let respuesta = array.map(e => <Cartas producto={e} key={e.id}/>)
+    let respuesta = array.map(e => <Cartas producto={e} key={e.codigo}/>)
   return respuesta
 }
 return<>
   <div className="itemListContainer" >
     <h2 key="greeting">{parametro.categoriaId}</h2>
-      <div className="productosMostradosContainer" key="contenedorProductos">
+      <div className="productosMostradosContainer">
         {productosAMostrar ? renderProductosAMostrar(productosAMostrar[parametro.categoriaId]) : renderProductosAMostrar(todoElCatalogo)}
       </div>
   </div>

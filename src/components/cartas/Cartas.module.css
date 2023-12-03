@@ -3,12 +3,12 @@
   position: relative;
   flex-direction: column;
   justify-content: center;
-  width: 16rem;
-  height: 24rem;
+  width: 256px;
+  height: 384px;
   border-radius: .25rem;
   background-color:var(--colorSecundario2) ;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.216); /* sombra suave para todos los divs */
-  transition: box-shadow 0.3s ease; /* transición suave */
+  transition: box-shadow 0.3s ease-in; /* transición suave */
   
 }
 .card img{
@@ -30,8 +30,7 @@
 }
 .contenedorBotones{
   display: flex;
-  justify-content: center;
-  column-gap: 2vmin;
+  justify-content:space-between;
   width: 100%;
   background-color: var(--colorSecundario);
   border-radius: 0 0 .25rem .25rem;
@@ -39,5 +38,5 @@
 .contenedorBotones button{
   border: solid black .125rem;
   border-radius: .25rem;
-  margin: .125rem 0;
+  margin: 8px 16px;
 }
