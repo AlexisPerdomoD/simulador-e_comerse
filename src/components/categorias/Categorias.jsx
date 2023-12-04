@@ -10,7 +10,7 @@ export  const Categorias = ({productos}) => {
   if(contextNavBar.valorClickNavBar === "categorias"){
     return <>
   <div className="listaCategoriaContainer">
-    <div className="cerrarCategorias">
+  <div className="cerrarCategorias">
       <BotonGenerico valor="cerrarCategorias" texto="cerrar"  funcionOModuloAEjecutar={()=>contextNavBar.clickNavBarToggle()}/>
     </div>
     <div className="listaCategoria">

@@ -1,0 +1,20 @@
+.carritoIcon{
+    display: flex;
+    align-items:end;
+    column-gap: 4px;
+    flex-wrap: nowrap;
+    padding: 8px;
+}
+.carritoIcon:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+.carritoIcon h4{
+    align-self:flex-end;
+    padding: 2px 10px;
+    color: var(--colorSubtitulosLight);
+    background-color: var(--colorPrincipal);
+    border-radius: 3rem;
+    border: none;
+    margin-bottom: 0;
+}

@@ -3,6 +3,7 @@ export * from './assets/destructurador';
 export * from './assets/generadorDeProductosTest';
 export * from './assets/useFetch';
 export { default as BotonGenerico } from './components/botonGenerico/BotonGenerico';
+export * from './components/cartContainer/CartContainer';
 export * from './components/cartWidget/CartWidget';
 export * from './components/cartas/Cartas';
 export * from './components/categorias/Categorias';

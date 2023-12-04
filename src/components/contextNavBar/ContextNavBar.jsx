@@ -6,15 +6,24 @@ const ContextNavBar = createContext();
 
 export const ClickNavBarProvider = ({children})=>{ 
   const [valorClickNavBar, setValorClickNavBar] = useState("inicio");
-  
-   function clickNavBarToggle(valorBotonNavBar) {
+  const [productosCarrito, setProductosCarrito] = useState([]);
+
+  function clickNavBarToggle(valorBotonNavBar) {
     setValorClickNavBar(valorBotonNavBar)
   }
+  function cargarProductosCarrito(producto){
+    let index = productosCarrito.findIndex(e => e.codigo === producto.codigo) 
+    
+      index !== -1 ? productosCarrito[index].cantidad += 1 : setProductosCarrito(previoValor => [...previoValor , producto])
+      
+    console.log(productosCarrito)
+  }
+
   return <>
-  <ContextNavBar.Provider value={{valorClickNavBar, clickNavBarToggle}}>
-    {children}
+  <ContextNavBar.Provider value={{valorClickNavBar, clickNavBarToggle, productosCarrito, cargarProductosCarrito}}>
+  {children}
   </ContextNavBar.Provider>
-  </>
+  </> 
 }
 
 {/* hook personalizado para evitar exportaciones de usecontext en otros modulos y verificar que se esta dentro de la jerarquia*/}
@@ -24,4 +33,3 @@ export const useNavBarContext = () => {
   if (!contexto){throw new Error("contexto fuera de la jerarquia")}
   return contexto
 }
-

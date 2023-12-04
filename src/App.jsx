@@ -8,6 +8,7 @@ import { ItemDetailContainer } from './components/itemDetailContainer/ItemDetail
 import { destructurador } from './assets/destructurador';
 import { SobreNosotros } from './components/sobreNosotros/SobreNosotros';
 import { Contactanos } from './components/contactanos/Contactanos';
+import { CartContainer } from './components/cartContainer/CartContainer';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <BrowserRouter>
         <Header/>
         {productos.isLoading ? <h2>cargando...</h2> : < Categorias productos={productos.data} />}
+        <CartContainer />
           <Routes>
             <Route exact path='/' element ={productos.isLoading ? <h2>cargando...</h2> : <ItemListContaiener todoElCatalogo={destructurador(productos.data)}/>}/>
             <Route exact path='/categoria/:categoriaId' element = {productos.isLoading ? <h2>cargando...</h2> : <ItemListContaiener productosAMostrar={productos.data}/>}/>

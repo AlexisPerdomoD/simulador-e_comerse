@@ -5,8 +5,8 @@
   align-content: center;
   flex-wrap: wrap;
   column-gap: 10vmin;
-  padding: 5vmin;
-  margin: 5vmin;
+  padding: 100px 5vmin;
+  margin: 0 5vmin ;
   min-height: 70vh;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.367); /* sombra suave para todos los divs */
   transition: box-shadow 0.3s ease; /* transición suave */

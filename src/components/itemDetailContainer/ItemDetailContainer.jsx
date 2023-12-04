@@ -3,9 +3,11 @@ import { destructurador } from "../../assets/destructurador";
 import { useState } from "react";
 import BotonGenerico from "../botonGenerico/BotonGenerico";
 import "./itemDetailContainer.css"
+import { useNavBarContext } from "../contextNavBar/ContextNavBar";
 
 
 export const ItemDetailContainer = ({productos}) => {
+  const {clickNavBarToggle} = useNavBarContext();
   const {itemId} = useParams();
   const [cont, setCont]= useState(0)
   let producto = destructurador(productos).find(e => e.codigo === parseInt(itemId));
@@ -19,7 +21,7 @@ const moverlista = (valor)=> {
     }
 }
 return <>
-<div className="itemListContainerDetail">
+<div className="itemListContainerDetail" onClick={()=>clickNavBarToggle("")}>
   <div className="itemImagen">
     <img src={producto.imagenes[cont]} alt={`imagen descriptiva de ${producto.nombre}`} />
     <div className="botonesContainer">
