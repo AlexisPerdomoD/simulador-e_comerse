@@ -1,22 +1,21 @@
-import { collection, getDoc, query, where } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../config/fireBaseConfig"
 
-export const fireBaseDB = (parametro, condicion, operador = "==") => {
+export const fireBaseDB = async(parametro, condicion, operador = "==") => {
     const products = parametro? query(collection(db, "products"), where(parametro,operador, condicion )):query(collection(db, "products"));
-
-    let productosDB;
-    getDoc(products)
-    .then(resp =>{
-             productosDB = resp.docs.map(doc =>{
+    let productosDB = []
+    await  getDocs(products)
+        .then(resp =>{
+              productosDB = resp.docs.map(data =>{
                 const product ={
-                    id: doc.id,
-                    ...doc.data()
+                    id: data.id,
+                    ...data.data()
                     }
                 return product
                 }
             )
-        }
-    ).catch(error => console.error(error))
+            console.log(productosDB)
+        }).catch(error => console.log(error))
     console.log(productosDB)
-    return productosDB
+    return  productosDB
 }

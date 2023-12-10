@@ -7,13 +7,14 @@ const ContextGlobal = createContext();
 
 export const GlobalProvider = ({children})=>{ 
    // contexto productos de base de datos
-   const [productos, setProductos] = useState({catalogo:null, isLoading:true })
+   const [products, setProducts] = useState({catalogo:null, isLoading:true })
 
-   function traerFirebaseDB(parametros){
-       setProductos(fireBaseDB(parametros))
+   const  traerFirebaseDB= async(parametros) =>{
+      const respuesta = await fireBaseDB();
+       setProducts({catalogo:respuesta, isLoading:false})
    }
   return <>
-  <ContextGlobal.Provider value={{productos, traerFirebaseDB}}>
+  <ContextGlobal.Provider value={{products, traerFirebaseDB}}>
     {children}
   </ContextGlobal.Provider>
   </>
