@@ -1,17 +1,19 @@
 import { createContext, useContext, useState } from "react";
+import { fireBaseDB } from "../../assets/fireBaseDB";
 
 const ContextGlobal = createContext();
 
-{/*plantilla generica de context para implementar luego */}
+{/*parametros para ser usados en App.jsx osea children = main.jsx */}
 
-export const ClickNavBarProvider = ({children})=>{ 
-  const [valorClick, setValorClick] = useState("");
-  
-   function clickToggle(valorBoton) {
-    setValorClick(valorBoton)
-  }
+export const GlobalProvider = ({children})=>{ 
+   // contexto productos de base de datos
+   const [productos, setProductos] = useState({catalogo:null, isLoading:true })
+
+   function traerFirebaseDB(parametros){
+       setProductos(fireBaseDB(parametros))
+   }
   return <>
-  <ContextGlobal.Provider value={{valorClick, clickToggle}}>
+  <ContextGlobal.Provider value={{productos, traerFirebaseDB}}>
     {children}
   </ContextGlobal.Provider>
   </>
@@ -19,7 +21,7 @@ export const ClickNavBarProvider = ({children})=>{
 
 {/* hook personalizado para evitar exportaciones de usecontext en otros modulos y verificar que se esta dentro de la jerarquia*/}
 
-export const useNavBarContext = () => {
+export const useGlobalContext = () => {
   const contexto = useContext(ContextGlobal);
   if (!contexto){throw new Error("contexto fuera de la jerarquia")}
   return contexto

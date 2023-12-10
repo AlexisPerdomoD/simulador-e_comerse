@@ -1,5 +1,5 @@
 import { Header } from './components/header/Header';
-import {ClickNavBarProvider} from "./components/contextNavBar/ContextNavBar";
+import {ClickNavBarProvider, useNavBarContext} from "./components/contextNavBar/ContextNavBar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useFetch } from './assets/useFetch';
 import { Categorias } from './components/categorias/Categorias';
@@ -9,9 +9,12 @@ import { destructurador } from './assets/destructurador';
 import { SobreNosotros } from './components/sobreNosotros/SobreNosotros';
 import { Contactanos } from './components/contactanos/Contactanos';
 import { CartContainer } from './components/cartContainer/CartContainer';
+import { useGlobalContext } from './components/contextGLobal/ContextGlobal';
+import { useEffect } from 'react';
 
 
 function App() {
+  let productos2 = null;
   const productos = useFetch("../src/info.json")
 
     return (

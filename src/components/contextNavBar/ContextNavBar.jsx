@@ -1,26 +1,28 @@
 import { createContext, useContext, useState } from "react";
+import { fireBaseDB } from "../../assets/fireBaseDB";
 
 const ContextNavBar = createContext();
 
-{/*funcion generadora de contexto para determianr el valor del ultimo boton precionado en mi navBar */}
+{/*contexto general para parametros necesarios globalmente */}
 
 export const ClickNavBarProvider = ({children})=>{ 
-  const [valorClickNavBar, setValorClickNavBar] = useState("inicio");
-  const [productosCarrito, setProductosCarrito] = useState([]);
-// click navbar
+  // click navbar
+  const [valorClickNavBar, setValorClickNavBar] = useState("inicio")
+
   function clickNavBarToggle(valorBotonNavBar) {
     setValorClickNavBar(valorBotonNavBar)
-  }
-
+  };
+  
   // carrito
+  const [productosCarrito, setProductosCarrito] = useState([])
+
   function cargarProductosCarrito(producto){
     let index = productosCarrito.findIndex(e => e.codigo === producto.codigo) 
     
       index !== -1 ? productosCarrito[index].cantidad += 1 : setProductosCarrito(previoValor => [...previoValor , producto])
-      
-    console.log(productosCarrito)
-  }
+  };
 
+ 
   return <>
   <ContextNavBar.Provider value={{valorClickNavBar, clickNavBarToggle, productosCarrito, cargarProductosCarrito}}>
   {children}
