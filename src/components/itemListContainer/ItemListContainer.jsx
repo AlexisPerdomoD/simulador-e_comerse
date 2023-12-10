@@ -3,20 +3,24 @@ import { Cartas } from "../cartas/Cartas"
 import "./itemListContainer.css"
 import { useNavBarContext } from "../contextNavBar/ContextNavBar";
 import { useGlobalContext } from "../contextGLobal/ContextGlobal";
+import { useEffect } from "react";
+
 
 const ItemListContaiener = () => {
   const  {categoriaId} = useParams();
-  const {clickNavBarToggle} = useNavBarContext()
-  const {traerFirebaseDB, products} = useGlobalContext;
+  const {clickNavBarToggle} = useNavBarContext();
+  const {traerFirebaseDB, products} = useGlobalContext();
 
-  //const productos = useFetch("../src/info.json")
+  //
   useEffect(()=>{
     if(categoriaId){
-      
-      traerFirebaseDB("categoria", "==",categoriaId )
-    }
+      console.log(categoriaId)
+      traerFirebaseDB("categoria", categoriaId)
+    }else{
       traerFirebaseDB()
-  },[])
+    }
+    
+  },[categoriaId])
 
 
   const renderProductosAMostrar = (array) => { 
@@ -27,7 +31,7 @@ return<>
   <div className="itemListContainer" onClick={()=>clickNavBarToggle("")}>
     <h2 key="greeting">{categoriaId ? categoriaId : "bienvenido a todo nuestro catalogo"}</h2>
       <div className="productosMostradosContainer">
-        {products.isLoading && renderProductosAMostrar(products)}
+        {products.isLoading ?<h2>cargando...</h2> : renderProductosAMostrar(products.catalogo)}
       </div>
   </div>
   </>

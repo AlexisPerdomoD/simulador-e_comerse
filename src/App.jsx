@@ -14,6 +14,7 @@ import { useGlobalContext} from './components/contextGLobal/ContextGlobal';
 
 
 function App() {
+  const productos = useFetch("../src/info.json")
   
   const { products} = useGlobalContext();
   
@@ -25,7 +26,7 @@ function App() {
         {productos.isLoading ? <h2>cargando...</h2> : < Categorias productos={productos.data} />}
         <CartContainer />
           <Routes>
-            <Route exact path='/' element ={products.isLoading ? <h2>cargando...</h2> : <ItemListContaiener />}/>
+            <Route exact path='/' element ={ <ItemListContaiener />}/>
             <Route exact path='/categoria/:categoriaId' element = {productos.isLoading ? <h2>cargando...</h2> : <ItemListContaiener productosAMostrar={productos.data}/>}/>
             <Route exact path='/item/:itemId' element={productos.isLoading ? <h2>cargando...</h2> :<ItemDetailContainer productos={productos.data}/>}/>
             <Route exact path='/sobreNosotros' element={<SobreNosotros/>}/>
