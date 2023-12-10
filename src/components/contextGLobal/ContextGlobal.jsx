@@ -10,7 +10,7 @@ export const GlobalProvider = ({children})=>{
    const [products, setProducts] = useState({catalogo:null, isLoading:true })
 
    const  traerFirebaseDB= async(parametros) =>{
-      const respuesta = await fireBaseDB();
+      const respuesta = await fireBaseDB({parametros});
        setProducts({catalogo:respuesta, isLoading:false})
    }
   return <>
