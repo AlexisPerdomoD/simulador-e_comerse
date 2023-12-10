@@ -1,5 +1,6 @@
 export { default as App } from './App';
 export * from './assets/destructurador';
+export * from './assets/fireBaseDB';
 export * from './assets/generadorDeProductosTest';
 export * from './assets/useFetch';
 export { default as BotonGenerico } from './components/botonGenerico/BotonGenerico';
@@ -17,4 +18,7 @@ export * from './components/itemDetailContainer/ItemDetailContainer';
 export { default as ItemListContainer } from './components/itemListContainer/ItemListContainer';
 export { default as NavBar } from './components/navBar/NavBar';
 export * from './components/sobreNosotros/SobreNosotros';
+export * from './config/fireBaseConfig';
+export * from './config/seedProducts';
+export * from './index';
 export * from './main';

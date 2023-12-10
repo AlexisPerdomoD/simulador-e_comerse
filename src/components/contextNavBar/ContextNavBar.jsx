@@ -7,10 +7,12 @@ const ContextNavBar = createContext();
 export const ClickNavBarProvider = ({children})=>{ 
   const [valorClickNavBar, setValorClickNavBar] = useState("inicio");
   const [productosCarrito, setProductosCarrito] = useState([]);
-
+// click navbar
   function clickNavBarToggle(valorBotonNavBar) {
     setValorClickNavBar(valorBotonNavBar)
   }
+
+  // carrito
   function cargarProductosCarrito(producto){
     let index = productosCarrito.findIndex(e => e.codigo === producto.codigo) 
     
