@@ -1,38 +1,34 @@
 import { Header } from './components/header/Header';
 import {ClickNavBarProvider} from "./components/contextNavBar/ContextNavBar";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useFetch } from './assets/useFetch';
-import { Categorias } from './components/categorias/Categorias';
 import ItemListContaiener from './components/itemListContainer/ItemListContainer';
 import { ItemDetailContainer } from './components/itemDetailContainer/ItemDetailContainer';
 import { SobreNosotros } from './components/sobreNosotros/SobreNosotros';
 import { Contactanos } from './components/contactanos/Contactanos';
-import { CartContainer } from './components/cartContainer/CartContainer';
-import { useGlobalContext} from './components/contextGLobal/ContextGlobal';
+import CrearOrden from './components/crearOrden/CrearOrden';
 
 
 
 function App() {
-  const productos = useFetch("../src/info.json")
-  
   
     return (
     <>
     <ClickNavBarProvider>
       <BrowserRouter>
+      {/* header */}
         <Header/>
-         < Categorias productos={productos.data} />
-        <CartContainer />
+        {/* main */}
           <Routes>
             <Route exact path='/' element ={ <ItemListContaiener />}/>
             <Route exact path='/categoria/:categoriaId' element = {<ItemListContaiener />}/>
-            <Route exact path='/item/:itemId' element={<ItemDetailContainer productos={productos.data}/>}/>
+            <Route exact path='/item/:itemId' element={<ItemDetailContainer/>}/>
             <Route exact path='/sobreNosotros' element={<SobreNosotros/>}/>
             <Route exact path='/contactanos' element={<Contactanos/>}/>
+            <Route exact path='/createOrder' element={<CrearOrden />}/>
           </Routes>
       </BrowserRouter>
-      
     </ClickNavBarProvider>
+    {/* footer */}
     </>
   )
 }
