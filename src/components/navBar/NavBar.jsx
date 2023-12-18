@@ -34,7 +34,7 @@ import "./NavBar.css"
         </ul>
       </div>
     </nav>
-    <CartWidget  contextoNavBar={navContext.clickNavBarToggle}/>
+    <CartWidget/>
   </div>
   </>
 }

@@ -12,15 +12,7 @@ const ItemListContaiener = () => {
   const {traerFirebaseDB, products} = useGlobalContext();
 
   //
-  useEffect(()=>{
-    if(categoriaId){
-      console.log(categoriaId)
-      traerFirebaseDB("categoria", categoriaId)
-    }else{
-      traerFirebaseDB()
-    }
-    
-  },[categoriaId])
+  useEffect(()=>{ categoriaId ? traerFirebaseDB("categoria", categoriaId) : traerFirebaseDB()} , [categoriaId])
 
 
   const renderProductosAMostrar = (array) => { 

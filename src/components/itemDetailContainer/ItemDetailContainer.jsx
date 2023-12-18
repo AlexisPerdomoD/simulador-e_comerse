@@ -1,32 +1,35 @@
 import { useParams } from "react-router-dom"
 import { destructurador } from "../../assets/destructurador";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BotonGenerico from "../botonGenerico/BotonGenerico";
 import "./itemDetailContainer.css"
 import { useNavBarContext } from "../contextNavBar/ContextNavBar";
+import { useGlobalContext } from "../contextGLobal/ContextGlobal";
 
 
 export const ItemDetailContainer = ({productos}) => {
   const {clickNavBarToggle} = useNavBarContext();
+  const {products, traerFirebaseDB} = useGlobalContext();
   const {itemId} = useParams();
   const [cont, setCont]= useState(0)
-  let producto = destructurador(productos).find(e => e.codigo === parseInt(itemId));
+  let producto = products.catalogo;
 const moverlista = (valor)=> {
     if(valor === -1 && cont === 0){
-      setCont(producto.imagenes.length-1)
-    }else if(valor === 1 && cont === producto.imagenes.length-1){
+      setCont(producto[0].imagenes.length-1)
+    }else if(valor === 1 && cont === producto[0].imagenes.length-1){
       setCont(0)
     }else{
       setCont(cont + valor)
     }
 }
-return <>
+useEffect(()=>{ itemId && traerFirebaseDB("codigo", parseInt(itemId))} , [itemId])
+return (!products.isLoading?<>
 <div className="itemListContainerDetail" onClick={()=>clickNavBarToggle("")}>
   <div className="itemImagen">
-    <img src={producto.imagenes[cont]} alt={`imagen descriptiva de ${producto.nombre}`} />
+    <img src={producto[0].imagenes[cont]} alt={`imagen descriptiva de ${producto.nombre}`} />
     <div className="botonesContainer">
-    <BotonGenerico kei={()=>crypto.randomUUID()} texto="Atras" funcionOModuloAEjecutar={()=>moverlista(-1)}/>
-    <BotonGenerico kei={()=>crypto.randomUUID()} texto="siguiente" funcionOModuloAEjecutar={()=>moverlista(1)}/>
+    <BotonGenerico texto="Atras" funcionOModuloAEjecutar={()=>moverlista(-1)}/>
+    <BotonGenerico texto="siguiente" funcionOModuloAEjecutar={()=>moverlista(1)}/>
     </div>
   </div>
   <div className="itemInformacion">
@@ -38,5 +41,5 @@ return <>
   </div>
 
 </div>
-</>
+</>: <h2>Cargando...</h2>)
 }

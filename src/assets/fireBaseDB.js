@@ -14,7 +14,6 @@ export const fireBaseDB = async(parametro, condicion, operador = "==") => {
                 return product
                 }
             )
-            console.log(productosDB)
         }).catch(error => console.log(error))
     return  productosDB
 }

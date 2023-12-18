@@ -8,7 +8,6 @@ import { ItemDetailContainer } from './components/itemDetailContainer/ItemDetail
 import { SobreNosotros } from './components/sobreNosotros/SobreNosotros';
 import { Contactanos } from './components/contactanos/Contactanos';
 import { CartContainer } from './components/cartContainer/CartContainer';
-import { useEffect } from 'react';
 import { useGlobalContext} from './components/contextGLobal/ContextGlobal';
 
 
@@ -16,19 +15,18 @@ import { useGlobalContext} from './components/contextGLobal/ContextGlobal';
 function App() {
   const productos = useFetch("../src/info.json")
   
-  const { products} = useGlobalContext();
   
     return (
     <>
     <ClickNavBarProvider>
       <BrowserRouter>
         <Header/>
-        {productos.isLoading ? <h2>cargando...</h2> : < Categorias productos={productos.data} />}
+         < Categorias productos={productos.data} />
         <CartContainer />
           <Routes>
             <Route exact path='/' element ={ <ItemListContaiener />}/>
-            <Route exact path='/categoria/:categoriaId' element = {productos.isLoading ? <h2>cargando...</h2> : <ItemListContaiener productosAMostrar={productos.data}/>}/>
-            <Route exact path='/item/:itemId' element={productos.isLoading ? <h2>cargando...</h2> :<ItemDetailContainer productos={productos.data}/>}/>
+            <Route exact path='/categoria/:categoriaId' element = {<ItemListContaiener />}/>
+            <Route exact path='/item/:itemId' element={<ItemDetailContainer productos={productos.data}/>}/>
             <Route exact path='/sobreNosotros' element={<SobreNosotros/>}/>
             <Route exact path='/contactanos' element={<Contactanos/>}/>
           </Routes>

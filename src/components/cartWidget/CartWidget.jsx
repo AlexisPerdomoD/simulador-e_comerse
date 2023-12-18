@@ -1,11 +1,12 @@
 import {BsMinecart} from "react-icons/bs";
 import { useNavBarContext } from "../contextNavBar/ContextNavBar";
 import "./cartWidget.css"
-export const CartWidget = ({contextoNavBar}) => {
-  const {productosCarrito} = useNavBarContext()
+export const CartWidget = () => {
+  const {productosCarrito, clickNavBarToggle} = useNavBarContext()
+  console.log(productosCarrito)
   
-  return <div className="carritoIcon" onClick={()=>contextoNavBar("showCart")}>
+  return <div className="carritoIcon" onClick={()=>clickNavBarToggle("showCart")}>
     <BsMinecart size={"40px"} title="cart"className="icon"/>
-    <h4>{productosCarrito.length !== 0 && productosCarrito.length}</h4>
+    {productosCarrito.filter(e=>e.cantidad>0).length !== 0 && <h4>{productosCarrito.filter(e=>e.cantidad>0).length}</h4>}
   </div>
 }
