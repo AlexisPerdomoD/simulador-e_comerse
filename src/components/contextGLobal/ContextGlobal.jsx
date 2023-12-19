@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from "react";
 import { fireBaseDB } from "../../assets/fireBaseDB";
+import { traerFireBaseById } from "../../assets/traerFireBaseById";
 
 const ContextGlobal = createContext();
 
@@ -10,11 +11,27 @@ export const GlobalProvider = ({children})=>{
    const [products, setProducts] = useState({catalogo:null, isLoading:true })
 
    const  traerFirebaseDB= async(...parametros) =>{
-      const respuesta = await fireBaseDB(...parametros);
-      setProducts({catalogo:respuesta, isLoading:false})
+      try {
+        const respuesta = await fireBaseDB(...parametros);
+        setProducts({catalogo:respuesta, isLoading:false})
+      } catch (error) {
+        console.log(error)
+      }
    }
+  //  contexto para ultima orden realizada 
+  const [lastOrder, setLastOrder] = useState({value:null, isLoading:true })
+
+  const traerLastOrder = async(...parametros) => {
+    try {
+      const respuesta = await traerFireBaseById(...parametros);
+      setLastOrder({value:respuesta, isLoading:false})
+    } catch (error) {
+      console.error(error)
+    }
+  }  
+
   return <>
-  <ContextGlobal.Provider value={{products, traerFirebaseDB}}>
+  <ContextGlobal.Provider value={{products, traerFirebaseDB, lastOrder, traerLastOrder}}>
     {children}
   </ContextGlobal.Provider>
   </>

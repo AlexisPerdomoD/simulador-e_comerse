@@ -1,8 +1,8 @@
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../config/fireBaseConfig"
 
-export const fireBaseDB = async(parametro, condicion, operador = "==") => {
-    const products = parametro? query(collection(db, "products"), where(parametro,operador, condicion )):query(collection(db, "products"));
+export const fireBaseDB = async(parametro, condicion, operador = "==", bd = "products") => {
+    const products = parametro ? query(collection(db, bd), where(parametro,operador, condicion )) : query(collection(db, bd));
     let productosDB = []
     await  getDocs(products)
         .then(resp =>{

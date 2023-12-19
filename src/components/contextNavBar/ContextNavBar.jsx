@@ -11,11 +11,14 @@ export const ClickNavBarProvider = ({children})=>{
   };
   
   // carrito
-  const [productosCarrito, setProductosCarrito] = useState([])
+  const [productosCarrito, setProductosCarrito] = useState(localStorage.getItem("carrito") ? JSON.parse(localStorage.getItem("carrito")) : [] )
 
-  function cargarProductosCarrito(producto, cantidad){
+  function cargarProductosCarrito(producto, cantidad  ){
     let index = productosCarrito.findIndex(e => e.codigo === producto.codigo) 
-    if(index !== -1){
+    if(producto === false && cantidad === 0){
+      setProductosCarrito([])
+      localStorage.removeItem("carrito")
+    }else if(index !== -1){
       let res = productosCarrito
       res[index].cantidad = cantidad
       setProductosCarrito(res)
@@ -28,6 +31,7 @@ export const ClickNavBarProvider = ({children})=>{
       }
     }else{
       setProductosCarrito(previoValor => [...previoValor , producto])
+      localStorage.setItem("carrito", JSON.stringify(productosCarrito.concat(producto)))
     }
   };
 

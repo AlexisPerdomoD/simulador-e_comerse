@@ -1,32 +1,13 @@
 import BotonGenerico from "../botonGenerico/BotonGenerico";
 import { useNavBarContext } from "../contextNavBar/ContextNavBar"
+import { RenderCarrito } from "./RenderCarrito";
 
 import "./cartContainer.css"
 import { Link } from "react-router-dom";
 
 export const CartContainer = () => {
     const {productosCarrito, valorClickNavBar, clickNavBarToggle} = useNavBarContext();
-
-    function renderCarrito(productos){
-        let respuesta = []
-            let total = 0
-        productos = productos.filter(e => e.cantidad > 0 )
-        respuesta = productos.map((e)=>{
-            total += e.cantidad * e.precio.toFixed(2)
-            return <>
-                <li className="productoCarrito" key={e.codigo}>
-                <img src={e.imagenes[0] || "/img/logoTest.svg"} alt={e.nombre} width="60px" height="60px" />
-                <div className="prodcutoCarritoInformacion">
-                    <h4>{e.nombre}</h4>
-                    <p>Cantidad: {e.cantidad}</p>
-                    <p>Precio: {e.cantidad * e.precio.toFixed(2)}/S</p>
-                </div>
-            </li>
-            </>
-        })
-        return {respuesta, total}
-    }
-    let cartItems = renderCarrito(productosCarrito)
+    let cartItems = RenderCarrito(productosCarrito)
  return (valorClickNavBar === "showCart" && <>
     <section className="carritoContainer">
         <div className="cerrarCarrito">
@@ -36,11 +17,12 @@ export const CartContainer = () => {
             { cartItems.respuesta}
         </ul>
         <div className="generateOrder">
-            <p>precio total antes de impuesto:{cartItems.total.toFixed(2)}/S</p>
-            <p>precio total 12% impuesto:{(cartItems.total*1.12).toFixed(2)}/S</p>
-            <Link to={"/createOrder"}>
-                <BotonGenerico texto="Generar orden"/>
-            </Link>
+            {cartItems.cantidad !==0 && <p>precio total de {cartItems.cantidad} item(s) antes de impuesto:{cartItems.total.toFixed(2)}/S </p>}
+            {cartItems.cantidad !==0 && <p>precio total 12% impuesto:{(cartItems.total*1.12).toFixed(2)}/S</p>}
+            {cartItems.cantidad ===0 && <p>Por favor agregue un producto</p>}
+
+            {productosCarrito.length > 0 && <Link to={"/createOrder"}><BotonGenerico texto="Generar orden"/></Link>}
+            
             
         </div>
     </section>

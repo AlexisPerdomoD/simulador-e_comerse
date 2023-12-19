@@ -20,7 +20,7 @@ export const BotonCarta = ({productosCarrito, producto}) => {
 
       return <>
       {contador > 0  && <BotonGenerico texto={"-1"} funcionOModuloAEjecutar={() => contadorToggle(-1)}/>}
-      <span className="count">{contador}</span>
+      {contador > 0 && <span className="count">Cant:{contador}</span>}
       <BotonGenerico texto={"+1"} funcionOModuloAEjecutar={() => contadorToggle(1)}/>
       <BotonGenerico texto={textoBtnPr} funcionOModuloAEjecutar={()=>{cargarProductosCarrito(producto, contador);setRenderKey((pre)=> pre + 1)}}/>
       </>
