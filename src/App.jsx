@@ -1,14 +1,11 @@
 import { Header } from './components/header/Header';
 import {ClickNavBarProvider} from "./components/contextNavBar/ContextNavBar";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import ItemListContaiener from './components/itemListContainer/ItemListContainer';
-import { ItemDetailContainer } from './components/itemDetailContainer/ItemDetailContainer';
-import { SobreNosotros } from './components/sobreNosotros/SobreNosotros';
-import { Contactanos } from './components/contactanos/Contactanos';
-import CrearOrden from './components/crearOrden/CrearOrden';
-import OrderCompleted from './components/crearOrden/orderCompleted';
+import { BrowserRouter } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import { CuerpoPrincipal } from './components/cuerpoPrincipal/CuerpoPrincipal';
+import "./index.css"
+
+
 
 
 

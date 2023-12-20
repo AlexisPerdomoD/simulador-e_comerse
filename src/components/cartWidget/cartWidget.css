@@ -3,7 +3,9 @@
     align-items:end;
     column-gap: 4px;
     flex-wrap: nowrap;
-    padding: 8px;
+    padding: var(--spacing-2);
+    flex-shrink: 0;
+    color: var(--muted-foreground-subtle);
 }
 .carritoIcon:hover{
     cursor: pointer;
@@ -11,10 +13,11 @@
 }
 .carritoIcon h4{
     align-self:flex-end;
-    padding: 2px 10px;
-    color: var(--colorSubtitulosLight);
-    background-color: var(--colorPrincipal);
-    border-radius: 3rem;
-    border: none;
+    padding: 4px var(--spacing-3);
+    color: var(--success-foreground);
+    font-weight: 600;
+    background-color: var(--success);
+    border-radius: var(--rounded-full);
+    border: 3px solid var(--success-border);
     margin-bottom: 0;
 }

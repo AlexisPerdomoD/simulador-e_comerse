@@ -3,6 +3,7 @@ import { Categorias } from "../categorias/Categorias"
 import NavBar from "../navBar/NavBar"
 import  "./header.css"
 
+
 export const Header = () => {
   return <>
   <header className="header"> 

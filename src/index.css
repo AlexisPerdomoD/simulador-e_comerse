@@ -110,6 +110,7 @@
   --width-5xl: 64rem; /* 1024px */
   --width-6xl: 72rem; /* 1152px */
   --width-7xl: 80rem; /* 1280px */
+  --width-8xl: 100rem; /* 1280px */
 }
 /* resets */
 /*
@@ -221,7 +222,7 @@ hr {
 .container {
   --padding: 16px;
   padding-inline: var(--padding);
-  max-width: var(--width-7xl);
+  max-width: var(--width-8xl);
   margin-inline: auto;
 }
 

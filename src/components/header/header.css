@@ -1,13 +1,14 @@
 .header{
   display: flex;
+  max-width: 100%!important;
   z-index: 1;
   position: sticky;
   top: 0;
-  padding: 0 var(--spacing-8);
   gap: var(--spacing-6) ;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: var(--background);
+  min-height: 5rem;
+  padding-inline: var(--spacing-4);
 }
 .tittle__principal {
   color:var(--primary);
@@ -16,9 +17,14 @@
 }
 .tittle__principal h1{
   font-family: var(--display);
+  font-size: var(--font-4xl);
   align-self: baseline;
+  line-height: var(--leading-none);
 }
 .logo__principal{
-  max-width: 48px;
+  max-width: var(--spacing-8);
+  vertical-align: bottom;
+  font-family: var(--heading);
+  flex: 0 0 0;
   display: inline-flex;
 }

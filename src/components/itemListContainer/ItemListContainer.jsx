@@ -22,7 +22,7 @@ const ItemListContaiener = () => {
 return<>
   <div className="itemListContainer" onClick={()=>clickNavBarToggle("")}>
     <h2 key="greeting">{categoriaId ? categoriaId : "bienvenido a todo nuestro catalogo"}</h2>
-      <div className="productosMostradosContainer">
+      <div className="itemListContainerProducts">
         {products.isLoading ?<h2>cargando...</h2> : renderProductosAMostrar(products.catalogo)}
       </div>
   </div>

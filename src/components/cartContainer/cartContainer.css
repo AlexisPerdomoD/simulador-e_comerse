@@ -3,7 +3,7 @@
     right: 0;
     z-index: 1;
     margin: 100px  0 0;  
-    background-color: red; 
+    background-color: inherit; 
     min-width: 400px;
     max-width: 600px;
 }
