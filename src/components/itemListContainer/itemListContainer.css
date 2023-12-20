@@ -2,18 +2,18 @@
 .itemListContainer{
   display: flex;
   flex-direction: column;
-  max-width: 120rem;
-  margin-inline: auto;
-  padding-inline: var(--spacing-4);
+  
 }
-.itemListContainer h2{
-  padding: var(--spacing-4);
+.itemListContainer .greeting{
+  font-size: var(--font-3xl);
+  line-height: var(--leading-none);
+  font-family: var(--display);
+
   margin: 48px 0;
 }
 .itemListContainerProducts{
-  background-color: red;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, min-max(24rem, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-8);
   
 }

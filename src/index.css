@@ -1,7 +1,7 @@
-#root {
+:root {
   /* settings */
   /* paleta de colores*/
-  --background: white;
+  --background: #ffffff;
   --foreground: hsl(0 0% 9%);
   --primary: hsl(142 72% 29%);
   --primary-foreground: white;
