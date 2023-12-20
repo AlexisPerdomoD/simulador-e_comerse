@@ -1,0 +1,24 @@
+.header{
+  display: flex;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+  padding: 0 var(--spacing-8);
+  gap: var(--spacing-6) ;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: var(--background);
+}
+.tittle__principal {
+  color:var(--primary);
+  text-shadow: 2px 0 2px var(--success-foreground);
+  display: flex;
+}
+.tittle__principal h1{
+  font-family: var(--display);
+  align-self: baseline;
+}
+.logo__principal{
+  max-width: 48px;
+  display: inline-flex;
+}
