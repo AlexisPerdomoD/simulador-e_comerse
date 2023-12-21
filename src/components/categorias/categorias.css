@@ -1,35 +1,31 @@
-.listaCategoriaContainer{
-  position:fixed;
+.listCategoryContainer{
+  position:absolute;
   right: 0;
+  
   z-index: 1;
-  margin: 100px  0 0;
-  border-radius: 1rem;
-  overflow: hidden;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.57); 
+  margin: 12rem  0 0;
+  overflow: hidden; 
   transition: box-shadow 0.3s ease; 
-  background-color: var(--colorSecundario);
+  background-color: var(--secondary);
   
   
 }
-.listaCategoriaContainer button{
-  font-size: 1.25rem;
+.listCategoryContainer button{
+  font-size: var(--font-lg);
   line-height: 2.5rem;
-  background-color: var(--colorSecundario1);
+  padding: var(--spacing-3);
 }
-.listaCategoriaContainer button:hover{
-  background-color: var(--colorSubtitulos);
-  scale:1.05;
-  transition: all .1s;
+
+.closeCategory{
+  padding: var(--spacing-6);
 }
-.cerrarCategorias{
-  padding: 24px;
-}
-.cerrarCategorias button{
+.closeCategory button{
   padding: 8px 16px;
   width: 100%;
+  background-color: var(--muted);
   
 }
-.listaCategoria{
+.listCategory{
   
   max-width: 300px;
   width: max-content;
@@ -37,8 +33,4 @@
   flex-direction: column;
   flex-wrap: wrap;
 }
-.listaCategoria button {
-  padding: 16px 8px;
-  box-sizing: border-box;
 
-}

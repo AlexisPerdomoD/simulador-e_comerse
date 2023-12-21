@@ -27,26 +27,26 @@ const moverlista = (valor)=> {
 }
 
 useEffect(()=>{ itemId && traerFirebaseDB("codigo", +itemId)} , [itemId])
-return (!products.isLoading ? <>
-<div className="itemListContainerDetail" onClick={()=>clickNavBarToggle("")}>
+return (!products.isLoading ? <section className="section">
+<div className="itemListContainerDetail container" onClick={()=>clickNavBarToggle("")}>
   <div className="itemImagen">
     <img src={producto[0].imagenes[cont]} alt={`imagen descriptiva de ${producto[0].nombre}`} />
-    <div className="botonesContainer">
+    <div className="buttonImg--container">
     <BotonGenerico texto="Atras" funcionOModuloAEjecutar={()=>moverlista(-1)}/>
     <BotonGenerico texto="siguiente" funcionOModuloAEjecutar={()=>moverlista(1)}/>
     </div>
   </div>
-  <div className="itemInformacion">
-    <h3 className="itemTitulo titulo">{producto[0].nombre}</h3>
-    <p className="itemDescripcion descripcion">{producto[0].descripcion}</p>
-    <p className="precio"><strong style={{color:"var(--colorSecundario)",fontSize:"2rem"}}>S/{producto[0].precio} cada unidad</strong></p>
+  <div className="item__information">
+    <h3 className="item__title">{producto[0].nombre}</h3>
+    <p className="item__description">{producto[0].descripcion}</p>
+    <p className="precio"><strong>S/{producto[0].precio} cada unidad</strong></p>
 
-    <div className="addCartContainer--detail">
+    <div className="buttonContainer">
       <BotonCarta productosCarrito={productosCarrito} producto={producto[0]}/>
 
     </div>
   </div>
 
 </div>
-</> : <h2>Cargando...</h2>)
+</section> : <h2>Cargando...</h2>)
 }

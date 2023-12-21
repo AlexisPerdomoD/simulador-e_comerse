@@ -7,7 +7,7 @@ import {  useNavigate } from 'react-router-dom';
 import { useGlobalContext } from "../contextGLobal/ContextGlobal"
 
 export default function CrearOrden() {
-    const {productosCarrito, cargarProductosCarrito} = useNavBarContext()
+    const {productosCarrito, cargarProductosCarrito, clickNavBarToggle} = useNavBarContext()
     const {traerLastOrder} = useGlobalContext()
     const [entradas, setEntradas] = useState([])
     const navigate = useNavigate();
@@ -53,9 +53,9 @@ export default function CrearOrden() {
     
     let cartItems = RenderCarrito(productosCarrito , true)
     return (productosCarrito.length < 1 ? <h2>por favor agrega productos para comprar </h2> : <>
-    <section className="section">
+    <section className="section" onClick={()=>clickNavBarToggle("")}>
         <div className="container">
-            <div className="hero__content">
+            <div className="hero__content hero--center">
                 <h2 className="hero__title">
                     ingrese los datos para generar su compra
                 </h2>
@@ -63,33 +63,35 @@ export default function CrearOrden() {
                     Es importante que llenes correctamente todos los campos ya que sera la forma en la que nos mantendremos en contacto para hacerte llegar todas las updates necesarias en el proceso de envio de tu pedido
                 </p>
             </div>
-            <form action="" id="order" onSubmit={(event)=>{enviarOrden(event);navigate('/orderCompleted')}}>
-                <label className="label">
-                    Nombres*
-                    <input type="text" className="input" required placeholder="alexis j" id="nombre" onChange={()=>inputCheck()}/>
-                </label>
-                <label className="label">
-                    Apellidos*
-                    <input type="text" className="input" required placeholder="Perdomo Diaz" id="apellido"  onChange={()=>inputCheck()}/>
-                </label>
-                <label className="label">
-                    Telefono*
-                    <input type="text" className="input" required placeholder="606505505" id="telefono"  onChange={()=>inputCheck()}/>
-                </label>
-                <label className="label">
-                    Email*
-                    <input type="email" className="input" required placeholder="ale@mail.com" id="email"  onChange={()=>inputCheck()}/>
-                </label>
-                <label className="label">
-                    Verificar email*
-                    <input type="email" className="input" required placeholder="ale@mail.com" id="email2"  onChange={()=>inputCheck()}/>
-                    { (entradas[4] || entradas[3]) && <p className="alarm__email">ambos campos de correo deben ser iguales</p>}
-                </label>
+            <form className="hero__content ma"  action="" id="order" onSubmit={(event)=>{enviarOrden(event);navigate('/orderCompleted')}}>
+                <div className="container__flex section-sm">
+                    <label className="label">
+                        <p>Nombres*</p>
+                        <input type="text" className="input" required placeholder="alexis j" id="nombre" onChange={()=>inputCheck()}/>
+                    </label>
+                    <label className="label">
+                        <p>Apellidos*</p>
+                        <input type="text" className="input" required placeholder="Perdomo Diaz" id="apellido"  onChange={()=>inputCheck()}/>
+                    </label>
+                    <label className="label">
+                        <p>Telefono*</p>
+                        <input type="text" className="input" required placeholder="606505505" id="telefono"  onChange={()=>inputCheck()}/>
+                    </label>
+                    <label className="label">
+                        <p>Email*</p>
+                        <input type="email" className="input" required placeholder="ale@mail.com" id="email"  onChange={()=>inputCheck()}/>
+                    </label>
+                    <label className="label">
+                        <p>Verificar email*</p>
+                        <input type="email" className="input" required placeholder="ale@mail.com" id="email2"  onChange={()=>inputCheck()}/>
+                        { (entradas[4] || entradas[3]) && <p className="alarm__email">ambos campos de correo deben ser iguales</p>}
+                    </label>
+                </div>
                 
-                <ul className="order__items">
+                <ul className="order__items ">
                     {cartItems.respuesta}
                 </ul>
-                <button type="submit" id="button__submit" disabled>
+                <button type="submit" id="button__submit" className="button__primary ma" disabled>
                     En espera
                 </button>
             </form>

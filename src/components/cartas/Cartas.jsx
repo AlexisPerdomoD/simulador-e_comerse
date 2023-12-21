@@ -12,10 +12,10 @@ export const Cartas = ({producto})=> {
     <div className="cardBody">
       <h5 className="card__title">{producto.nombre}</h5>
       <p className="price">Precio por unidad: <strong>S/{producto.precio}</strong></p>
-    </div>
         <Link to={`/item/${producto.codigo}`}>
-        <BotonGenerico valor="detallesProducto" texto="detalles" />
+        <BotonGenerico valor="detallesProducto" texto="detalles" claseAdicional="button--secondary"/>
         </Link>
+    </div>
     < div className="buttonContainer" >
         <BotonCarta productosCarrito={productosCarrito} producto={producto}/>
       </div>

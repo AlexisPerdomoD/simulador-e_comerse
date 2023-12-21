@@ -1,5 +1,6 @@
 
 import { useGlobalContext } from "../contextGLobal/ContextGlobal";
+import "./ordenCreada.css"
 
 export default function OrderCompleted() {
     const {lastOrder} = useGlobalContext()
@@ -14,9 +15,9 @@ export default function OrderCompleted() {
                         aqui dejamos un registro y detalles de tu compra, estaremos poniendonos en contacto para que puedas disfrutar lo mas pronto posible de nuetros productos!
                     </p>
                 </div>
-                <div className="order-information">
-                    <h2 className="order-information__title">Esta orden esta hecha a nombre de:</h2>
+                <div className="order__information">
                     <div className="buyer__information">
+                    <h2 className="order__information__title">Esta orden esta hecha a nombre de:</h2>
                         <div className="buyer__item">
                             <h3>Nombre: {lastOrder.value.buyer.nombre}</h3>
                         </div>
@@ -31,24 +32,25 @@ export default function OrderCompleted() {
                         </div>
                     </div>
                 <section className="section">
-                    <div className="product-list">
-                        <h3 className="order-information__title">Estos son los detalles de los productos en la orden</h3>
-                        <ol className="ordered_list">
+                    <div className="product__list">
+                        <h3 className="order__information__title">Estos son los detalles de los productos en la orden:</h3>
+                        <ol className="ordered__list">
                             {lastOrder.value.items.map(p =>{
                                 return (
-                                    <li className="List-item">
-                                        <img src={p.imagenes[0]} alt={p.nombre} />
+                                    <li className="list__item">
+                                        <img src={p.imagenes[0]} alt={p.nombre} width={"150px"} height={"160px"} />
                                         <div>
                                             <p>{p.nombre}</p>
-                                            <p>cantidad:{p.cantidad}</p>
-                                            <p>precio:{p.precio}</p>
+                                            <p>Descripcion: {p.descripcion}</p>
+                                            <p>Cantidad: {p.cantidad}</p>
+                                            <p>Precio:{p.precio}/S</p>
                                         </div>
                                     </li>)
                             })}
                         </ol>
-                        <div className="order-information__general">
+                        <div className="order__information__general">
                             <h4 className="order__sent">Fecha de compra:{lastOrder.value.time}</h4>
-                            <h4 className="total__price">Precio total pagado incluyendo impuestos: {lastOrder.value.total}</h4>
+                            <h4 className="total__price">Precio total pagado incluyendo impuestos: {lastOrder.value.total}/S</h4>
                         </div>
                     </div>
                 </section>

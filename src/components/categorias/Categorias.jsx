@@ -9,11 +9,11 @@ export  const Categorias = () => {
 
   if(contextNavBar.valorClickNavBar === "categorias"){
     return <>
-  <div className="listaCategoriaContainer">
-  <div className="cerrarCategorias">
+  <div className="listCategoryContainer">
+  <div className="closeCategory">
       <BotonGenerico valor="cerrarCategorias" texto="cerrar"  funcionOModuloAEjecutar={()=>contextNavBar.clickNavBarToggle()}/>
     </div>
-    <div className="listaCategoria">
+    <div className="listCategory">
       { listaCategoria.map(e => <Link to={`/categoria/${e}`} key={e}><BotonGenerico texto={e} valor={e} kei={e + Math.random} /></Link>  ) }
     </div>
   </div>

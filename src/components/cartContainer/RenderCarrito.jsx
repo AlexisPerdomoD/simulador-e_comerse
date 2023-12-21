@@ -1,7 +1,7 @@
 import { BotonCarta } from "../botonCarta/BotonCarta"
 import { useNavBarContext } from "../contextNavBar/ContextNavBar"
 
-export  function RenderCarrito(productos, botones = false){
+export  function RenderCarrito(productos, botones = false, measure = ["60px", "60px"]){
     const {productosCarrito} = useNavBarContext()
     let respuesta = []
         let total = 0
@@ -11,9 +11,9 @@ export  function RenderCarrito(productos, botones = false){
         total += e.cantidad * e.precio.toFixed(2)
         cantidad += e.cantidad
         return <>
-                <li className="productoCarrito" key={e.codigo}>
-                <img src={e.imagenes[0] || "/img/logoTest.svg"} alt={e.nombre} width="60px" height="60px" />
-                <div className="productoCarritoInformacion">
+                <li className="productCarrito" key={e.codigo}>
+                <img src={e.imagenes[0] || "/img/logoTest.svg"} alt={e.nombre} width={measure[0]} height={measure[1]} />
+                <div className="productCarritoInformation">
                     <h4>{e.nombre}</h4>
                     <p>Cantidad: {e.cantidad}</p>
                     <p>Precio: {e.cantidad * e.precio.toFixed(2)}/S</p> 

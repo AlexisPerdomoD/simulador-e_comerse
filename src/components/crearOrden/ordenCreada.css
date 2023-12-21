@@ -1,0 +1,41 @@
+/* estilos basicos ordencreada page  */
+.order__information__title{
+    font-family: var(--display);
+    font-size: var(--font-3xl);
+    margin-block: var(--spacing-8);
+    font-weight: 600;
+    line-height: var(--leading-none);
+}
+.buyer__item h3{
+    font-family: var(--text);
+    font-size: var(--font-lg);
+    letter-spacing: var(--tracking-wide);
+    font-weight: 500;
+    margin-block: var(--spacing-2);
+    line-height: var(--leading-8);
+
+}
+.list__item{
+    display: flex;
+    column-gap: var(--spacing-10);
+    background-color: var(--secondary-hover);
+    margin-block: var(--spacing-6);
+
+}
+.list__item > div{
+    align-self: center;
+}
+.list__item > div > p{
+    font-weight: 500;
+    margin-block: var(--spacing-2);
+    font-family: var(--text);
+    font-size: var(--font-lg);
+}
+.order__information__general >h4{
+    font-family: var(--text);
+    font-size: var(--font-xl);
+    letter-spacing: var(--tracking-wide);
+    font-weight: 500;
+    margin-block: var(--spacing-4);
+    line-height: var(--leading-8);
+}

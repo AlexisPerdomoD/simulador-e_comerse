@@ -10,10 +10,10 @@ export const CartContainer = () => {
     let cartItems = RenderCarrito(productosCarrito)
  return (valorClickNavBar === "showCart" && <>
     <section className="carritoContainer">
-        <div className="cerrarCarrito">
-            <BotonGenerico valor="cerrarCarrito" texto="cerrar"  funcionOModuloAEjecutar={()=>clickNavBarToggle()}/>
+        <div className="closeCarrito">
+            <BotonGenerico valor="cerrarCarrito" texto="cerrar"  funcionOModuloAEjecutar={()=>clickNavBarToggle("")}/>
         </div>
-        <ul className="listaProductosCarrito">
+        <ul className="listProductsCarrito">
             { cartItems.respuesta}
         </ul>
         <div className="generateOrder">
@@ -21,7 +21,7 @@ export const CartContainer = () => {
             {cartItems.cantidad !==0 && <p>precio total 12% impuesto:{(cartItems.total*1.12).toFixed(2)}/S</p>}
             {cartItems.cantidad ===0 && <p>Por favor agregue un producto</p>}
 
-            {productosCarrito.length > 0 && <Link to={"/createOrder"}><BotonGenerico texto="Generar orden"/></Link>}
+            {productosCarrito.length > 0 && <Link to={"/createOrder"}><BotonGenerico texto="Generar orden" claseAdicional="button__primary" funcionOModuloAEjecutar={()=>clickNavBarToggle("")}/></Link>}
             
             
         </div>
