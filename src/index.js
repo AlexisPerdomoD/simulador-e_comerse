@@ -1,8 +1,6 @@
 export { default as App } from './App';
-export * from './assets/destructurador';
 export * from './assets/fireBaseDB';
 export * from './assets/traerFireBaseById';
-export * from './assets/useFetch';
 export * from './components/botonCarta/BotonCarta';
 export { default as BotonGenerico } from './components/botonGenerico/BotonGenerico';
 export * from './components/cartContainer/CartContainer';

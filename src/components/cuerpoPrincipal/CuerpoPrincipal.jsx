@@ -4,7 +4,7 @@ import { ItemDetailContainer } from "../itemDetailContainer/ItemDetailContainer"
 import { SobreNosotros } from "../sobreNosotros/SobreNosotros"
 import { Contactanos } from "../contactanos/Contactanos"
 import CrearOrden from "../crearOrden/CrearOrden"
-import OrderCompleted from "../crearOrden/orderCompleted"
+import { OrderCompleted } from "../crearOrden/OrderCompleted"
 
 
 export const CuerpoPrincipal = () => {

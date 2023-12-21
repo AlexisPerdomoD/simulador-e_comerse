@@ -27,7 +27,8 @@ const moverlista = (valor)=> {
 }
 
 useEffect(()=>{ itemId && traerFirebaseDB("codigo", +itemId)} , [itemId])
-return (!products.isLoading ? <section className="section">
+
+return (products.isLoading ?  <h2>Cargando...</h2> : (producto.length === 0 ? <h2 className="hero__title ma">Producto no encontrado</h2>:<section className="section">
 <div className="itemListContainerDetail container" onClick={()=>clickNavBarToggle("")}>
   <div className="itemImagen">
     <img src={producto[0].imagenes[cont]} alt={`imagen descriptiva de ${producto[0].nombre}`} />
@@ -48,5 +49,7 @@ return (!products.isLoading ? <section className="section">
   </div>
 
 </div>
-</section> : <h2>Cargando...</h2>)
+</section> )
+)
+
 }

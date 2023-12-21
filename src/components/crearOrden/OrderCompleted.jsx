@@ -2,9 +2,9 @@
 import { useGlobalContext } from "../contextGLobal/ContextGlobal";
 import "./ordenCreada.css"
 
-export default function OrderCompleted() {
+export  function OrderCompleted() {
     const {lastOrder} = useGlobalContext()
-    return (lastOrder.isLoading ? <h2>Esperando comprobante de orden, ya casi estamos listos</h2> :
+    return (lastOrder.isLoading ? <h2 className="hero__title">Esperando comprobante de orden, ya casi estamos listos</h2> :
         <section className="section-lg">
             <div className="container">
                 <div className="hero__content">
@@ -37,7 +37,7 @@ export default function OrderCompleted() {
                         <ol className="ordered__list">
                             {lastOrder.value.items.map(p =>{
                                 return (
-                                    <li className="list__item">
+                                    <li className="list__item" key={p.id}>
                                         <img src={p.imagenes[0]} alt={p.nombre} width={"150px"} height={"160px"} />
                                         <div>
                                             <p>{p.nombre}</p>
@@ -50,6 +50,7 @@ export default function OrderCompleted() {
                         </ol>
                         <div className="order__information__general">
                             <h4 className="order__sent">Fecha de compra:{lastOrder.value.time}</h4>
+                            <h4 className="order__id">id de compra: {lastOrder.value.id}</h4>
                             <h4 className="total__price">Precio total pagado incluyendo impuestos: {lastOrder.value.total}/S</h4>
                         </div>
                     </div>

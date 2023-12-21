@@ -10,8 +10,7 @@ export  function RenderCarrito(productos, botones = false, measure = ["60px", "6
     respuesta = respuesta.map((e)=>{
         total += e.cantidad * e.precio.toFixed(2)
         cantidad += e.cantidad
-        return <>
-                <li className="productCarrito" key={e.codigo}>
+        return  <li className="productCarrito" key={e.id}>
                 <img src={e.imagenes[0] || "/img/logoTest.svg"} alt={e.nombre} width={measure[0]} height={measure[1]} />
                 <div className="productCarritoInformation">
                     <h4>{e.nombre}</h4>
@@ -20,7 +19,7 @@ export  function RenderCarrito(productos, botones = false, measure = ["60px", "6
                     {botones && <BotonCarta productosCarrito={productosCarrito} producto={e}/>}                
                 </div>
             </li>
-        </>
+
     })
     return {respuesta, total , cantidad}
 }

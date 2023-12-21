@@ -6,6 +6,6 @@ export const traerFireBaseById = async(bd, id) => {
     let lastOrder = []
     const docSnap = await getDoc(snap)
     lastOrder = docSnap.exists() ? docSnap.data() : "not found"
-    console.log(lastOrder)
+    lastOrder.id = id
     return lastOrder
 }
